@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -9,6 +9,14 @@ namespace Tests
 {
     public class LoadSpriteByName
     {
+        [UnityTest]
+        public IEnumerator LoadSpriteByFullAddress()
+        {
+            var handle = Addressables.LoadAssetAsync<Sprite>("Test Atlas[happy]");
+            yield return handle;
+            Assert.AreEqual(AsyncOperationStatus.Succeeded, handle.Status);
+        }
+
         [UnityTest]
         public IEnumerator LoadSpriteByNameWithEnumeratorPasses()
         {

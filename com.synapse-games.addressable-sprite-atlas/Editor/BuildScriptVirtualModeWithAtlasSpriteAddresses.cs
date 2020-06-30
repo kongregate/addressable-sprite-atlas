@@ -5,11 +5,11 @@ using UnityEngine;
 namespace Synapse.AddressableAtlasSprite
 {
     [CreateAssetMenu(
-        fileName = "BuildScriptFastModeWithAtlasSpriteAddresses.asset",
-        menuName = "Addressables/Custom Build/Fast Mode with Atlas Sprite Addresses")]
-    public class BuildScriptFastModeWithAtlasSpriteAddresses : BuildScriptFastMode
+        fileName = "BuildScriptVirtualModeWithAtlasSpriteAddresses.asset",
+        menuName = "Addressables/Custom Build/Virtual Mode with Atlas Sprite Addresses")]
+    public class BuildScriptVirtualModeWithAtlasSpriteAddresses : BuildScriptVirtualMode
     {
-        public override string Name => "Use Asset Database (faster, with atlas sprite addresses)";
+        public override string Name => "Simulate Groups (advanced, with atlas sprite addresses)";
 
         protected override string ProcessGroup(
             AddressableAssetGroup assetGroup,

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.U2D;
 
@@ -21,7 +21,12 @@ namespace Synapse.AddressableAtlasSprite
 
             var spriteKey = providerInterface.ResourceManager.TransformInternalId(providerInterface.Location);
             var sprite = atlas.GetSprite(spriteKey);
-            providerInterface.Complete(sprite, sprite != null, sprite != null ? null : new System.Exception($"Sprite failed to load for location {providerInterface.Location.PrimaryKey}."));
+            providerInterface.Complete(
+                sprite,
+                sprite != null,
+                sprite != null
+                    ? null
+                    : new System.Exception($"Sprite failed to load for location {providerInterface.Location.PrimaryKey}."));
         }
     }
 }
