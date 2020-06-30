@@ -1,0 +1,15 @@
+{
+  "name": "com.syanpse-games.addressable-sprite-atlas",
+  "version": "0.1.0",
+  "displayName": "Addressable SpriteAtlas Sprites",
+  "description": "Provides a way to directly address sprites in a SpriteAtlas.",
+  "unity": "2018.4",
+  "author": {
+    "name": "David LeGare",
+    "email": "dlegare@syanpse-games.com",
+    "url": "http://synapsegames.com/"
+  },
+  "dependencies": {
+    "com.unity.addressables": "1.10.0"
+  }
+}
