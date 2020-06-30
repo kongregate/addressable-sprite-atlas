@@ -10,6 +10,14 @@ namespace Tests
     public class LoadSpriteByName
     {
         [UnityTest]
+        public IEnumerator LoadNonAtlasSprite()
+        {
+            var handle = Addressables.LoadAssetAsync<Sprite>("happy_non_atlas");
+            yield return handle;
+            Assert.AreEqual(AsyncOperationStatus.Succeeded, handle.Status);
+        }
+
+        [UnityTest]
         public IEnumerator LoadSpriteByFullAddress()
         {
             var handle = Addressables.LoadAssetAsync<Sprite>("Test Atlas[happy]");
