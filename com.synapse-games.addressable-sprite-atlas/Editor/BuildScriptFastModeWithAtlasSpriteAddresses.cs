@@ -6,7 +6,7 @@ namespace Synapse.AddressableAtlasSprite
 {
     [CreateAssetMenu(
         fileName = "BuildScriptFastModeWithAtlasSpriteAddresses.asset",
-        menuName = "Addressables/Custom Build/Fast Mode with Atlas Sprite Addresses")]
+        menuName = "Addressables/Addressable Atlas Sprite Build/Fast Mode")]
     public class BuildScriptFastModeWithAtlasSpriteAddresses : BuildScriptFastMode
     {
         public override string Name => "Use Asset Database (faster, with atlas sprite addresses)";

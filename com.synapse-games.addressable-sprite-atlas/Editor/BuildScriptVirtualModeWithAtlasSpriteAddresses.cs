@@ -6,7 +6,7 @@ namespace Synapse.AddressableAtlasSprite
 {
     [CreateAssetMenu(
         fileName = "BuildScriptVirtualModeWithAtlasSpriteAddresses.asset",
-        menuName = "Addressables/Custom Build/Virtual Mode with Atlas Sprite Addresses")]
+        menuName = "Addressables/Addressable Atlas Sprite Build/Virtual Mode")]
     public class BuildScriptVirtualModeWithAtlasSpriteAddresses : BuildScriptVirtualMode
     {
         public override string Name => "Simulate Groups (advanced, with atlas sprite addresses)";

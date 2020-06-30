@@ -6,7 +6,7 @@ namespace Synapse.AddressableAtlasSprite
 {
     [CreateAssetMenu(
         fileName = "BuildScriptPackedModeWithAtlasSpriteAddresses.asset",
-        menuName = "Addressables/Custom Build/Packed Mode with Atlas Sprite Addresses")]
+        menuName = "Addressables/Addressable Atlas Sprite Build/Packed Mode")]
     public class BuildScriptPackedModeWithAtlasSpriteAddresses : BuildScriptPackedMode
     {
         public override string Name => "Default Build Script (with atlas sprite addresses)";
