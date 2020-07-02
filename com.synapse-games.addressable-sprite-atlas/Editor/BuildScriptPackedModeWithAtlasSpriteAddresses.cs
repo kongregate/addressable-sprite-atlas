@@ -9,7 +9,7 @@ namespace Synapse.AddressableAtlasSprite
         menuName = "Addressables/Addressable Atlas Sprite Build/Packed Mode")]
     public class BuildScriptPackedModeWithAtlasSpriteAddresses : BuildScriptPackedMode
     {
-        public override string Name => "Default Build Script (with atlas sprite addresses)";
+        public override string Name => "Packed with Atlas Sprite Addresses";
 
         protected override string ProcessGroup(AddressableAssetGroup assetGroup, AddressableAssetsBuildContext context)
         {
