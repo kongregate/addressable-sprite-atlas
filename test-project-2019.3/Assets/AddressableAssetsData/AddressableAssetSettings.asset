@@ -87,12 +87,15 @@ MonoBehaviour:
   m_CertificateHandlerType:
     m_AssemblyName: 
     m_ClassName: 
-  m_ActivePlayerDataBuilderIndex: 3
+  m_ActivePlayerDataBuilderIndex: 5
   m_DataBuilders:
   - {fileID: 11400000, guid: 33b6cc2ae113c0b4280fa7efb1cdd199, type: 2}
   - {fileID: 11400000, guid: 4308b7b5ba977824397d44498b28d3d7, type: 2}
   - {fileID: 11400000, guid: 3cd91c78793bd724d8a34d1531b38fc1, type: 2}
   - {fileID: 11400000, guid: fc36c96e4925bf04ca9a95422a53a1b3, type: 2}
+  - {fileID: 11400000, guid: 7c1f97f2896744c4fb18ca291e6baf36, type: 2}
+  - {fileID: 11400000, guid: 36eaf33894fd7c141b920d50aceef476, type: 2}
+  - {fileID: 11400000, guid: c9d26e4f2204fec4eb0ef1b7e96ba88f, type: 2}
   m_ActiveProfileId: 2d1097a340f691946bedcfb7163004d5
   m_HostingServicesManager:
     m_HostingServiceInfos:
@@ -102,7 +105,7 @@ MonoBehaviour:
         m_SerializedData:
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Int32
-          m_Data: 59679
+          m_Data: 54628
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String

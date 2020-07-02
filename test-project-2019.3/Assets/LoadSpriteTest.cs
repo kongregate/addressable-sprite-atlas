@@ -10,13 +10,13 @@ public class LoadSpriteTest : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return TryLoadSprite("happy_non_atlas");
-        yield return TryLoadTexture("happy_non_atlas");
+        yield return TryLoadSprite("happy");
+        yield return TryLoadTexture("happy");
         yield return TryLoadSprite("sad_non_atlas");
         yield return TryLoadTexture("sad_non_atlas");
     }
 
-    private IEnumerator TryLoadSprite(string address)
+    public static IEnumerator TryLoadSprite(string address)
     {
         Debug.Log($"Attempting to load Sprite @ {address}");
 
@@ -32,7 +32,8 @@ public class LoadSpriteTest : MonoBehaviour
             Debug.LogError($"Failed to load Sprite @ {address}: {handle.OperationException}");
         }
     }
-    private IEnumerator TryLoadTexture(string address)
+
+    public static IEnumerator TryLoadTexture(string address)
     {
         Debug.Log($"Attempting to load Texture2D @ {address}");
 

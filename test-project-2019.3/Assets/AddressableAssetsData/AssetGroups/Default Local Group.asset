@@ -32,7 +32,7 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 4343727234628468602, guid: 603eb068058b2cd41bed423d8abe5049,
       type: 2}
   - m_GUID: 86c9ab3f90efbbb4c85d1dca640be824
-    m_Address: happy_non_atlas
+    m_Address: happy
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 2800000, guid: 86c9ab3f90efbbb4c85d1dca640be824, type: 3}
