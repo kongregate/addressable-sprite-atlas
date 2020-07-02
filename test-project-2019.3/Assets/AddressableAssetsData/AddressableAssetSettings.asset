@@ -46,6 +46,20 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: 3d000468b23759e4db7afa7eaf195855
         m_Value: http://localhost/[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: 2d1097a340f691946bedcfb7163004d5
+      m_ProfileName: Editor Hosted
+      m_Values:
+      - m_Id: f5559687cd4355d4484d38d94a20fa13
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 479dd488f3431b74093b1310cc8b8fca
+        m_Value: HostedData/[BuildTarget]
+      - m_Id: fa74ddd4d8a562249b592a0439e3ae30
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+      - m_Id: b0ec300cb7f99e04dbf2256baeb2caaf
+        m_Value: HostedData/[BuildTarget]
+      - m_Id: 3d000468b23759e4db7afa7eaf195855
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
     m_ProfileEntryNames:
     - m_Id: f5559687cd4355d4484d38d94a20fa13
       m_Name: BuildTarget
@@ -73,18 +87,40 @@ MonoBehaviour:
   m_CertificateHandlerType:
     m_AssemblyName: 
     m_ClassName: 
-  m_ActivePlayerDataBuilderIndex: 6
+  m_ActivePlayerDataBuilderIndex: 3
   m_DataBuilders:
   - {fileID: 11400000, guid: 33b6cc2ae113c0b4280fa7efb1cdd199, type: 2}
   - {fileID: 11400000, guid: 4308b7b5ba977824397d44498b28d3d7, type: 2}
   - {fileID: 11400000, guid: 3cd91c78793bd724d8a34d1531b38fc1, type: 2}
   - {fileID: 11400000, guid: fc36c96e4925bf04ca9a95422a53a1b3, type: 2}
-  - {fileID: 11400000, guid: f8a08f28408b54241ba355d1d45ad030, type: 2}
-  - {fileID: 11400000, guid: 54f47a7e83c20764aa1fe855ca671b64, type: 2}
-  - {fileID: 11400000, guid: 5c80fc9e1212a554d8d5f8e0d5e0b733, type: 2}
-  m_ActiveProfileId: 276252b3e1e3cbb4186a7760a0dcbdcc
+  m_ActiveProfileId: 2d1097a340f691946bedcfb7163004d5
   m_HostingServicesManager:
-    m_HostingServiceInfos: []
+    m_HostingServiceInfos:
+    - classRef: UnityEditor.AddressableAssets.HostingServices.HttpHostingService,
+        Unity.Addressables.Editor
+      dataStore:
+        m_SerializedData:
+        - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          m_ClassName: System.Int32
+          m_Data: 59679
+          m_Key: HostingServicePort
+        - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          m_ClassName: System.String
+          m_Data: HostedData/StandaloneWindows
+          m_Key: ContentRoot
+        - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          m_ClassName: System.Boolean
+          m_Data: True
+          m_Key: IsEnabled
+        - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          m_ClassName: System.String
+          m_Data: Local Hosting
+          m_Key: DescriptiveName
+        - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+          m_ClassName: System.Int32
+          m_Data: 0
+          m_Key: InstanceId
     m_Settings: {fileID: 11400000}
-    m_NextInstanceId: 0
-    m_RegisteredServiceTypeRefs: []
+    m_NextInstanceId: 1
+    m_RegisteredServiceTypeRefs:
+    - UnityEditor.AddressableAssets.HostingServices.HttpHostingService, Unity.Addressables.Editor
