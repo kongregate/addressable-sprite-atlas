@@ -39,3 +39,8 @@ sysinfo.txt
 
 # VS Code
 /.vscode
+
+# Built Asset Bundles
+
+HostedData/
+ServerData/
