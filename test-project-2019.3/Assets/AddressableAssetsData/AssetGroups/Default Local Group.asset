@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 9df3788a503f2524caba6dc0a10e2c46
   m_SerializeEntries:
   - m_GUID: 200733b798921834a9bc1d93bed8e558
-    m_Address: sad_non_atlas
+    m_Address: sad
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 2800000, guid: 200733b798921834a9bc1d93bed8e558, type: 3}
@@ -27,10 +27,8 @@ MonoBehaviour:
     m_Address: Faces
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4343727234628468602, guid: 603eb068058b2cd41bed423d8abe5049,
-      type: 2}
-    m_TargetAsset: {fileID: 4343727234628468602, guid: 603eb068058b2cd41bed423d8abe5049,
-      type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 86c9ab3f90efbbb4c85d1dca640be824
     m_Address: happy
     m_ReadOnly: 0

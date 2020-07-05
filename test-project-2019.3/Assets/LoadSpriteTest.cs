@@ -1,22 +1,56 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.U2D;
+using UnityEngine.UI;
 
 public class LoadSpriteTest : MonoBehaviour
 {
-    public List<Sprite> _loadedSprites = new List<Sprite>();
+    public string[] SpriteAddresses;
+    public AssetReferenceSprite[] SpriteReferences;
+    public LayoutGroup DisplayGroup;
 
     IEnumerator Start()
     {
-        yield return TryLoadSprite("happy");
-        yield return TryLoadTexture("happy");
-        yield return TryLoadSprite("sad_non_atlas");
-        yield return TryLoadTexture("sad_non_atlas");
+        SpriteAtlasManager.atlasRegistered += atlas =>
+        {
+            Debug.Log($"Registered atlas: {atlas}");
+        };
+
+        SpriteAtlasManager.atlasRequested += (name, callback) =>
+        {
+            Debug.Log($"Atlas requested: {name}");
+        };
+
+        // NOTE: Explicitly initialize Addressables before trying to load anything so
+        // that it's easier to debug the loading sequence. Otherwise the first attempt
+        // to load a sprite will get chained onto the initialization process, which
+        // makes it more complicated to debug.
+        yield return Addressables.InitializeAsync();
+
+        foreach (var address in SpriteAddresses)
+        {
+            yield return TryLoadSprite(address);
+        }
+
+        foreach (var spriteReference in SpriteReferences)
+        {
+            var handle = spriteReference.LoadAssetAsync();
+            yield return handle;
+
+            if (AsyncOperationStatus.Succeeded == handle.Status)
+            {
+                Debug.Log($"Successfully loaded sprite reference {spriteReference}: {handle.Result}");
+            }
+            else
+            {
+                Debug.LogError($"Failed to load sprite reference {spriteReference}: {handle.OperationException}");
+            }
+        }
     }
 
-    public static IEnumerator TryLoadSprite(string address)
+    public IEnumerator TryLoadSprite(string address)
     {
         Debug.Log($"Attempting to load Sprite @ {address}");
 
@@ -26,27 +60,16 @@ public class LoadSpriteTest : MonoBehaviour
         if (AsyncOperationStatus.Succeeded == handle.Status)
         {
             Debug.Log($"Successfully loaded Sprite @ {address}: {handle.Result}");
+
+            var displayObject = new GameObject(address, typeof(Image));
+            var image = displayObject.GetComponent<Image>();
+            image.sprite = handle.Result;
+
+            displayObject.transform.SetParent(DisplayGroup.transform, false);
         }
         else
         {
             Debug.LogError($"Failed to load Sprite @ {address}: {handle.OperationException}");
-        }
-    }
-
-    public static IEnumerator TryLoadTexture(string address)
-    {
-        Debug.Log($"Attempting to load Texture2D @ {address}");
-
-        var handle = Addressables.LoadAssetAsync<Texture2D>(address);
-        yield return handle;
-
-        if (AsyncOperationStatus.Succeeded == handle.Status)
-        {
-            Debug.Log($"Successfully loaded Texture2D @ {address}: {handle.Result}");
-        }
-        else
-        {
-            Debug.LogError($"Failed to load Texture2D @ {address}: {handle.OperationException}");
         }
     }
 }
